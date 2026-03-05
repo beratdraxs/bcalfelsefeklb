@@ -1,0 +1,91 @@
+body, html {
+  margin: 0; padding: 0;
+  height: 100%; overflow: hidden;
+  font-family: Arial, sans-serif;
+  background: #000;
+}
+
+#splash {
+  position: fixed;
+  inset: 0;
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+  transition: opacity 1s;
+}
+
+#splash.hidden { opacity: 0; pointer-events: none; }
+
+.content {
+  text-align: center;
+  color: #333;
+}
+
+h1 { font-size: 4rem; margin: 0; }
+h2 { font-size: 2.5rem; margin: 1rem 0 2rem; }
+
+#enterBtn {
+  padding: 1rem 3rem;
+  font-size: 1.8rem;
+  background: #0066cc;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+#enterBtn:hover { background: #004080; }
+
+#main {
+  height: 100vh;
+  position: relative;
+}
+
+.hidden { display: none !important; }
+
+#viewport {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+  background: #111;
+  touch-action: none; /* mobil için iyi */
+}
+
+#container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform-origin: center center;
+  will-change: transform;
+  transition: transform 0.1s ease-out;
+}
+
+#mindmap {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  pointer-events: none; /* önce zoom için, sonra kaldırabiliriz */
+}
+
+#zoom-controls {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  display: flex;
+  gap: 10px;
+  z-index: 10;
+}
+
+button {
+  width: 50px;
+  height: 50px;
+  font-size: 2rem;
+  background: rgba(0,0,0,0.6);
+  color: white;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  cursor: pointer;
+}

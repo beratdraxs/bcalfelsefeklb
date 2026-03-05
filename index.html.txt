@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Varlık Felsefesi - Behcet Canbaz Anadolu Lisesi</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+  <!-- Karşılama Ekranı -->
+  <div id="splash">
+    <div class="content">
+      <h1>Hoşgeldiniz</h1>
+      <h2>Behcet Canbaz Anadolu Lisesi</h2>
+      <button id="enterBtn">Giriş</button>
+    </div>
+  </div>
+
+  <!-- Ana İçerik (gizli başlar) -->
+  <div id="main" class="hidden">
+    <div id="viewport">
+      <div id="container">
+        <img src="https://your-image-url-here.com/varlik-felsefesi.jpg" alt="Varlık Felsefesi Haritası" id="mindmap"/>
+        <!-- İleride buraya tıklanabilir notlar/tooltip ekleyebiliriz -->
+      </div>
+    </div>
+    <div id="zoom-controls">
+      <button id="zoomIn">+</button>
+      <button id="zoomOut">-</button>
+      <button id="reset">Sıfırla</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
